@@ -3,7 +3,7 @@
  */
 import '../node_modules/owl-carousel/owl-carousel/owl.carousel.css';
 import '../node_modules/owl-carousel/owl-carousel/owl.theme.css';
-import './styles/index.scss';
+import './styles/style.css';
 
 // const $ = require('jquery');
 /* jquery */
