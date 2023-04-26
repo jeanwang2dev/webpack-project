@@ -21,15 +21,17 @@ module.exports = {
         rules: [
             {
                 //css
-                test: /\.css$/i,
-                use: [
-                    MiniCssExtractPlugin.loader,
-                    'css-loader',
-                ],
+                test: /\.s?css$/i,
                 include: [
                     path.resolve(__dirname, 'src'),
                     path.resolve(__dirname, 'node_modules/owl-carousel/owl-carousel'),
-                ]
+                ],
+                use: [
+                    MiniCssExtractPlugin.loader,
+                    'css-loader',
+                    'sass-loader'
+                ],
+
             },
             {
                 // babel
