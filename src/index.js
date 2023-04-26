@@ -1,10 +1,20 @@
 /**
- * tailwindcss code
+ * owl carousel css
  */
-// import './style.css';
+import '../node_modules/owl-carousel/owl-carousel/owl.carousel.css';
+import '../node_modules/owl-carousel/owl-carousel/owl.theme.css';
+import './styles/style.css';
 
 // const $ = require('jquery');
+/* jquery */
+import 'jquery';
+import '../node_modules/owl-carousel/owl-carousel/owl.carousel.js';
+/* owl carousel js */
 
+$(".owl-carousel").owlCarousel();
+
+
+/** custom code */
 const dataGroupOne = {
     dataStart: 22,
     dataMid: 13,
