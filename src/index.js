@@ -24,7 +24,7 @@ const dataGroupOne = {
 const dataGroupTwo = {
     ...dataGroupOne,
     dataTail: 123,
-    dataEnd: 79,
+    dataEnd: 90,
 }
 
 console.log(dataGroupOne);

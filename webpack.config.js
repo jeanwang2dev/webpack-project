@@ -3,6 +3,7 @@ const webpack = require('webpack');
 
 const MiniCssExtractPlugin = require('mini-css-extract-plugin'); 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyPlugin = require("copy-webpack-plugin");
 
 let mode = process.env.NODE_ENV === "production" ? "production": "development";
 
@@ -12,13 +13,15 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js',
+        clean: true,
     },
     //devtool: 'source-map',
     //devtool: false,
     devServer: {
-        static: {
-            directory: path.resolve(__dirname, 'dist'),
-        },
+        // static: {
+        //     directory: path.resolve(__dirname, 'dist'),
+        // },
+        watchFiles: ["src/**/*"],
         port: 3000,
         open: false,
         hot: true,
@@ -41,10 +44,13 @@ module.exports = {
             },
             {
                 // babel
-                test: /\.js$/,
+                test: /\.js$/i,
                 exclude: /node_modules/,
                 use: {
                     loader: "babel-loader",
+                    options: {
+                        presets: ['@babel/preset-env'],
+                    },
                 },
             },
         ],
@@ -61,5 +67,10 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: "./src/index.html",
         }),
+        new CopyPlugin({
+            patterns: [
+              { from: "./src/img", to: "img" }
+            ],
+          }),
     ],
 }

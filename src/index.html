@@ -7,15 +7,57 @@
     <title>test</title>
 </head>
 <body>
-    <h1 class="bg-yellow-400">hello here</h1>
-    <div class="owl-carousel">
-        <div class="myitem"> Your Content </div>
-        <div class="myitem"> Your Content </div>
-        <div class="myitem"> Your Content </div>
-        <div class="myitem"> Your Content </div>
-        <div class="myitem"> Your Content </div>
-        <div class="myitem"> Your Content </div>
-        <div class="myitem"> Your Content </div>
-      </div>
+    <!-- Navbar -->
+    <nav class="relative container mx-auto p-6">
+        <!-- Flex container -->
+        <div class="flex items-center justify-between">
+            <!-- Logo -->
+            <div class="pt-2">
+                <img src="img/logo.svg" alt="">
+            </div>
+            <!-- Menu Items -->
+            <div class="hidden space-x-6 md:flex">
+                <a href="#" class="hover:text-darkGrayishBlue">Pricing</a>
+                <a href="#" class="hover:text-darkGrayishBlue">Product</a>
+                <a href="#" class="hover:text-darkGrayishBlue">About Us</a>
+                <a href="#" class="hover:text-darkGrayishBlue">Careers</a>
+                <a href="#" class="hover:text-darkGrayishBlue">Community</a>
+            </div>
+            <!-- Button -->
+            <div id="js-top-btn" class="hidden bg-brightRed rounded-full text-white p-3 py-2 px-5 baseline hover:bg-brightRedLight md:block">Get Started</div>
+            <!-- Hamburger Icon -->
+            <button id="menu-btn" class="block hamburger md:hidden focus:otline-none">
+                <span class="hamburger-top"></span>
+                <span class="hamburger-middle"></span>
+                <span class="hamburger-bottom"></span>
+            </button>
+        </div>
+        
+
+        <!-- Mobile Menu -->
+        <div class="md:hidden">
+            <div id="menu" class="hidden absolute flex-col items-center self-end py-8 mt-10 space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow-md">
+                <a href="#">Pricing</a>
+                <a href="#">About Us</a>
+                <a href="#">Product</a>
+                <a href="#">Careers</a>
+                <a href="#">Community</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container bg-gray-300 flex flex-col items-center mx-auto p-6">
+        <h1 class="bg-yellow-300 w-fit my-8">hello here</h1>
+        <div class="owl-carousel">
+            <div class="myitem"> Your Content </div>
+            <div class="myitem"> Your Content </div>
+            <div class="myitem"> Your Content </div>
+            <div class="myitem"> Your Content </div>
+            <div class="myitem"> Your Content </div>
+            <div class="myitem"> Your Content </div>
+            <div class="myitem"> Your Content </div>
+          </div>
+    </div>
+
 </body>
 </html>
