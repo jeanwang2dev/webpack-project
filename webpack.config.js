@@ -30,7 +30,7 @@ module.exports = {
         rules: [
             {
                 //css
-                test: /\.css$/i,
+                test: /\.s?css$/i,
                 include: [
                     path.resolve(__dirname, 'src'),
                     path.resolve(__dirname, 'node_modules/owl-carousel/owl-carousel'),
@@ -38,7 +38,8 @@ module.exports = {
                 use: [
                     MiniCssExtractPlugin.loader,
                     'css-loader',
-                    'postcss-loader'
+                    'postcss-loader',
+                    'sass-loader',
                 ],
 
             },
