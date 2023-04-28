@@ -1,36 +1,37 @@
 /**
  * owl carousel css
  */
-import '../node_modules/owl-carousel/owl-carousel/owl.carousel.css';
-import '../node_modules/owl-carousel/owl-carousel/owl.theme.css';
-import './styles/index.scss';
-import './styles/style.css';
+// import '../node_modules/owl-carousel/owl-carousel/owl.carousel.css';
+// import '../node_modules/owl-carousel/owl-carousel/owl.theme.css';
+
+/**
+ * my css & scss
+ */
+// import './styles/index.scss';
+// import './styles/style.css';
 
 
+/**
+ * owl carousel js
+ */
 // const $ = require('jquery');
 /* jquery */
-import 'jquery';
-import '../node_modules/owl-carousel/owl-carousel/owl.carousel.js';
+// import 'jquery';
+// import '../node_modules/owl-carousel/owl-carousel/owl.carousel.js';
 /* owl carousel js */
 
-$(".owl-carousel").owlCarousel();
+// $(".owl-carousel").owlCarousel();
+
+import React from "react-dom";
+import  ReactDOM from 'react-dom/client';
+import App from "./App";
+
+ReactDOM.createRoot(document.getElementById('root')).render(
+    <App />
+)
 
 
-/** custom code */
-const dataGroupOne = {
-    dataStart: 22,
-    dataMid: 13,
-    dataEnd: 45,
-};
 
-const dataGroupTwo = {
-    ...dataGroupOne,
-    dataTail: 123,
-    dataEnd: 90,
-}
-
-console.log(dataGroupOne);
-console.log(dataGroupTwo);
 
 // $( "#js-btn" ).on( "click", function() {
 //     alert('button got clicked!');
