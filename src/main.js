@@ -23,7 +23,7 @@
 // $(".owl-carousel").owlCarousel();
 
 import React from "react-dom";
-import  ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom/client';
 import App from "./App";
 
 //import 'jquery';
