@@ -3,13 +3,13 @@ const webpack = require('webpack');
 
 const MiniCssExtractPlugin = require('mini-css-extract-plugin'); 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CopyPlugin = require("copy-webpack-plugin");
+//const CopyPlugin = require("copy-webpack-plugin");
 
 let mode = process.env.NODE_ENV === "production" ? "production": "development";
 
 module.exports = {
     mode: mode,
-    entry: './src/index.js',
+    entry: './src/main.js',
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js',
@@ -29,14 +29,30 @@ module.exports = {
     module: {
         rules: [
             {
-                //css
+                // images
+                test: /\.(jpe?g|png)$/i,
+                type: "asset/resource",
+                generator: {
+                    publicPath: 'img/',
+                    outputPath: 'img/',
+                  },
+            },
+            {
+                test: /\.svg/,
+                type: "asset/inline",
+            },
+            {
+                // css
                 test: /\.s?css$/i,
                 include: [
                     path.resolve(__dirname, 'src'),
                     path.resolve(__dirname, 'node_modules/owl-carousel/owl-carousel'),
                 ],
                 use: [
-                    MiniCssExtractPlugin.loader,
+                    {
+                        loader: MiniCssExtractPlugin.loader,
+                        options: { publicPath: "img/" },
+                    },
                     'css-loader',
                     'postcss-loader',
                     'sass-loader',
@@ -68,11 +84,11 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: "./src/index.html",
         }),
-        new CopyPlugin({
-            patterns: [
-              { from: "./src/img", to: "img" }
-            ],
-          }),
+        // new CopyPlugin({
+        //     patterns: [
+        //       { from: "./src/img", to: "img" }
+        //     ],
+        //   }),
     ],
     resolve: {
         extensions: [".js", ".jsx"],

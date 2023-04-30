@@ -4,14 +4,21 @@
 // import '../styles/index.scss';
 import './styles/style.css';
 import Nav from './components/Nav';
-import Customdata from './components/Customdata';
+import Hero from './components/Hero';
+import Feature from './components/Feature';
+import Cta from './components/Cta';
+import Footer from './components/Footer';
+//import Customdata from './components/Customdata';
 
 const App = () => {
     return (
-        <div className="container mx-auto">
+        <>
             <Nav />
-            <Customdata />
-        </div>
+            <Hero />
+            <Feature />
+            <Cta />
+            <Footer />
+        </>
     )
 }
 

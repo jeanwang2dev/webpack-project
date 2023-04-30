@@ -32,7 +32,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 
 
 
-
 // $( "#js-btn" ).on( "click", function() {
 //     alert('button got clicked!');
 // });
