@@ -29,18 +29,28 @@ module.exports = {
     module: {
         rules: [
             {
-                // images
-                test: /\.(jpe?g|png)$/i,
-                type: "asset/resource",
+                // images inline depends on size
+                // Now webpack will automatically choose between resource and inline by following a default condition: a file with size less than 8kb will be treated as a inline module type and resource module type otherwise.
+                test: /\.(jpe?g|png|svg)$/i,
+                type: "asset",
                 generator: {
                     publicPath: 'img/',
                     outputPath: 'img/',
-                  },
+                  },                
             },
-            {
-                test: /\.svg/,
-                type: "asset/inline",
-            },
+            // {
+            //     // images
+            //     test: /\.(jpe?g|png)$/i,
+            //     type: "asset/resource",
+            //     generator: {
+            //         publicPath: 'img/',
+            //         outputPath: 'img/',
+            //       },
+            // },
+            // {
+            //     test: /\.svg/,
+            //     type: "asset/inline",
+            // },
             {
                 // css
                 test: /\.s?css$/i,

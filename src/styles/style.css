@@ -8,42 +8,78 @@
     body {
         @apply font-bvpro;
     }
+
+    body {
+        background-image: url('../img/bg-tablet-pattern2.svg');
+        background-repeat: no-repeat;
+        background-size: 1100px;
+        background-position: right top -25%
+    }
+
+    @media(max-width: 976px) {
+
+        body {
+            background-size:800px;
+            background-position: center top -5%;
+        }
+    }
+
+    /*
+    @media(max-width: 576px) {
+
+        body {
+            background-size:331px;
+            background-position: 64% -1%;
+        }
+    } */
+    
+
 }
 
 @layer components {
+
+    #cta {
+        background-image: url('../img/bg-simplify-section-desktop.svg');
+        background-repeat: no-repeat;
+    }
+
     .my-btn-cta {
         @apply font-bvpro text-white bg-brightRed shadow-lg shadow-brightRed/50 rounded-full p-3 py-2 px-5 hover:bg-brightRedLight hover:cursor-pointer;
     }
 }
 
-body {
-    background-image: url('../img/bg-tablet-pattern.svg');
-    background-repeat: no-repeat;
-    background-size: 800px;
-    background-position: 90% -25%;
-}
-
-
-/* #cta {
-    background-image: url('../img/bg-simplify-section-desktop.svg');
-    background-repeat: no-repeat;
-} */
-
-@media(max-width: 576px) {
+/* @media(max-width: 576px) {
 
     body {
-        background-size: 500px;
-        background-position: 50px -50px;
+        background-size: 600px;
+        background-position: 94% -10%;
     }
 
     #cta {
         background-image: url('../img/bg-simplify-section-mobile.svg');
     }
     
+} */
+
+
+
+
+
+
+.testmonial-item  {
+    height: 13rem;
+    padding: 3.5rem 1rem 1rem 1 rem;
+}
+
+
+.myitem {
+    background-color: greenyellow;
+    width: 60px;
+    height: 50px;
 }
 
 /* Hamburger Menu */
-.hamburger {
+/* .hamburger {
     cursor: pointer;
     width: 24px;
     height: 24px;
@@ -87,10 +123,5 @@ body {
 
 .open .hamburger-bottom {
     transform: rotate(-45deg) translateY(6px) translate(-6px);
-}
+} */
 
-.myitem {
-    background-color: greenyellow;
-    width: 60px;
-    height: 50px;
-}
