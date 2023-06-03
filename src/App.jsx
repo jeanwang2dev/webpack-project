@@ -16,9 +16,11 @@ const App = () => {
     return (
         <>
             <Nav />
-            <Hero />
-            <Feature />
-            <Testimonials />
+            <div className="combined-section">
+                <Hero />            
+                <Feature />
+                <Testimonials />
+            </div>
             <Cta />
             <Footer />
         </>

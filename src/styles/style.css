@@ -10,17 +10,16 @@
     }
 
     body {
-        background-image: url('../img/bg-tablet-pattern2.svg');
+        background-image: url('../img/bg-tablet-pattern.svg');
         background-repeat: no-repeat;
-        background-size: 1100px;
-        background-position: right top -25%
+        background-size: 436px;
+        background-position: right 10% top
     }
 
     @media(max-width: 976px) {
 
         body {
-            background-size:800px;
-            background-position: center top -5%;
+            background-position: center top -3%;
         }
     }
 
@@ -45,6 +44,19 @@
 
     .my-btn-cta {
         @apply font-bvpro text-white bg-brightRed shadow-lg shadow-brightRed/50 rounded-full p-3 py-2 px-5 hover:bg-brightRedLight hover:cursor-pointer;
+    }
+
+    .combined-section {
+        background-image: url('../img/bg-tablet-pattern.svg');
+        background-repeat: no-repeat;
+        background-size: 436px;
+        background-position: left -20% bottom 33%;        
+    }
+
+    @media(max-width: 976px) {
+        .combined-section {
+            background-position: top 14% right -483%;  
+        }
     }
 }
 
