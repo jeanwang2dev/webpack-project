@@ -57,7 +57,7 @@ module.exports = {
                 test: /\.s?css$/i,
                 include: [
                     path.resolve(__dirname, 'src'),
-                    path.resolve(__dirname, 'node_modules/owl-carousel/owl-carousel'),
+                    path.resolve(__dirname, 'node_modules/owl.carousel'),
                 ],
                 use: [
                     {
