@@ -34,7 +34,7 @@ function Nav() {
                     <button 
                         id="menu-btn" 
                         onClick={toggle} 
-                        className={`block hamburger md:hidden focus:outline-none ${mobileMenuState ? "" : "open" }`}>
+                        className={`block hamburger md:hidden focus:outline-none ${mobileMenuState ? "open" : "" }`}>
                         <span className="hamburger-top"></span>
                         <span className="hamburger-middle"></span>
                         <span className="hamburger-bottom"></span>
