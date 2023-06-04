@@ -1,7 +1,15 @@
+import { useState } from 'react' 
 import HTMLComment from 'react-html-comment';
 import logo from '../img/logo.svg';
 
 function Nav() {
+
+    const [mobileMenuState, setMobileMenuState] = useState(false)
+
+    function toggle() {
+        setMobileMenuState( prevMobileMenuState => !prevMobileMenuState)
+    }
+
     return (   
         <>  
             <HTMLComment text="Navbar" />      
@@ -23,7 +31,10 @@ function Nav() {
                     <HTMLComment text=" Button " />
                     <button id="js-top-btn" className="hidden my-btn-cta md:block">Get Started</button>
                     <HTMLComment text=" Hamburger Icon " />
-                    <button id="menu-btn" className="block hamburger md:hidden focus:otline-none">
+                    <button 
+                        id="menu-btn" 
+                        onClick={toggle} 
+                        className={`block hamburger md:hidden focus:outline-none ${mobileMenuState ? "" : "open" }`}>
                         <span className="hamburger-top"></span>
                         <span className="hamburger-middle"></span>
                         <span className="hamburger-bottom"></span>
@@ -31,14 +42,14 @@ function Nav() {
                 </div>
                 <HTMLComment text="Mobile Menu" />
                 <div className="md:hidden">
-                    <div id="menu" className="hidden absolute flex-col items-center self-end py-8 mt-10 space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow-md">
+                    <div id="menu" className={`menu ${mobileMenuState ? "flex " : "hidden"}`}>
                         <a href="#">Pricing</a>
                         <a href="#">About Us</a>
                         <a href="#">Product</a>
                         <a href="#">Careers</a>
                         <a href="#">Community</a>
                     </div>
-                </div>
+                </div>            
             </nav>
         </>   
     )
