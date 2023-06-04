@@ -15,11 +15,13 @@ import Footer from './components/Footer';
 const App = () => {
     return (
         <>
-            <Nav />
-            <div className="combined-section">
-                <Hero />            
-                <Feature />
-                <Testimonials />
+            <div className="top-combined-sections">
+                <Nav />
+                <div className="combined-sections">
+                    <Hero />            
+                    <Feature />
+                    <Testimonials />
+                </div>
             </div>
             <Cta />
             <Footer />
